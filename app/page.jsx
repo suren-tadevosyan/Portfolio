@@ -6,19 +6,18 @@ import { motion } from "framer-motion";
 const Homepage = () => {
   return (
     <motion.div
-      className="h-full   overflow-x-hidden"
+      className="h-full z-1  overflow-x-hidden"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
       <div className="h-full flex flex-col items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+        <div className="h-1/2 w-full lg:h-full lg:w-1/2 relative">
           <Image
             src="/hero.png"
             alt=""
-            width={600}
-            height={600}
+            fill
             className="object-contain"
           />
         </div>
