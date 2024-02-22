@@ -13,13 +13,13 @@ const Homepage = () => {
     >
       <div className="h-full flex flex-col items-center lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 w-full lg:h-full lg:w-1/2 lg:mg-r-20 relative">
+        <div className="h-1/2 w-full lg:h-2/3 lg:mb-40 lg:w-1/2 lg:mg-r-20 relative">
           <Image src="/img.png" alt="" fill className="object-contain" />
         </div>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 sm:gap-5 items-center justify-center">
           {/* TITLE */}
-          <h1 className=" sm:text-2.5xl lg:text-6xl md:text-4xl font-bold overflow-y-hidden ">
+          <h1 className="xs:text-2xl sm:text-3xl lg:text-6xl lg:pb-5 md:text-4xl md:mb-5 font-bold overflow-y-hidden ">
             Crafting Digital Experiences, Designing Tomorrow.
           </h1>
           {/* DESC */}
