@@ -43,9 +43,9 @@ const ContactPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="h-full z-1000 flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48  ">
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 xs:h-1/3 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/2 xs:h-1/4 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -67,12 +67,12 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 xs:h-2/3 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="h-1/2 xs:h-3/4 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 "
         >
           <span>Dear Suren,</span>
           <textarea
-            rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            rows={3}
+            className="bg-transparent z-100 border-b-2 border-b-black outline-none resize-none s:py-20 xs:py-6 "
             name="user_message"
           />
           <span>My mail address is:</span>
