@@ -14,12 +14,8 @@ const ContactPage = () => {
     console.log("semnd");
     e.preventDefault();
     setError(false);
-    setSuccess(true);
 
     // Hide success message after 2 seconds
-    setTimeout(() => {
-      setSuccess(false);
-    }, 2000);
 
     emailjs
       .sendForm(
@@ -32,18 +28,14 @@ const ContactPage = () => {
         () => {
           setSuccess(true);
           form.current.reset();
+          setTimeout(() => {
+            setSuccess(false);
+          }, 2000);
         },
         () => {
           setError(true);
         }
       );
-
-    setSuccess(true);
-
-    // Hide success message after 2 seconds
-    setTimeout(() => {
-      setSuccess(false);
-    }, 2000);
   };
 
   return (
@@ -92,7 +84,7 @@ const ContactPage = () => {
             className="bg-transparent border-b-2 border-b-black outline-none"
           />
           <span>Regards</span>
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
+          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4 hover:bg-black">
             Send
           </button>
           {success && (

@@ -27,7 +27,7 @@ const AboutPage = () => {
       {/* CONTAINER */}
       <div className="h-full overflow-y-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20  flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center lg:items-start  items-center">
             {/* BIOGRAPHY IMAGE */}
@@ -163,7 +163,7 @@ const AboutPage = () => {
           >
             {/* EXPERIENCE TITLE */}
             <motion.h1
-              initial={{ x: "-300px" }}
+              initial={{ x: "-600px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
@@ -185,15 +185,13 @@ const AboutPage = () => {
                     Front-End Developer
                   </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
+                  <div className="xs:p-0 lg:p-3 md:p-3 sm:pd-3  text-sm italic">
                     Developed and maintained responsive user interfaces,
                     ensuring optimal user experience across various devices and
-                    browsers. Implemented interactive elements and animations
-                    using JavaScript, enhancing user engagement and website
-                    functionality.
+                    browsers.
                   </div>
                   {/* JOB DATE */}
-                  <div className="p-3 text-black-400 text-sm font-semibold">
+                  <div className="  p-3 text-black-400 text-sm font-semibold ">
                     2023 - Present
                   </div>
                   {/* JOB COMPANY */}
@@ -225,21 +223,19 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Sport Trader
+                    Sport Trader, Digitain LLC
                   </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
+                  <div className="py-3 text-sm italic">
                     Set and monitored risk limits, ensuring responsible trading
                     practices and mitigating potential losses.
                   </div>
                   {/* JOB DATE */}
-                  <div className="p-3 text-black-400 text-sm font-semibold">
+                  <div className="py-0 mb-2 text-black-400 text-sm font-semibold">
                     2022 - 2023{" "}
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-3 rounded bg-white text-sm font-semibold w-fit">
-                    Digitain LLC
-                  </div>
+                 
                 </div>
               </div>
               {/* EXPERIENCE LIST ITEM */}
@@ -252,8 +248,8 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    Planned and dispatched freight shipments, ensuring
-                    efficient route optimization and adherence to deadlines.
+                    Planned and dispatched freight shipments, ensuring efficient
+                    route optimization and adherence to deadlines.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-black-400 text-sm font-semibold">

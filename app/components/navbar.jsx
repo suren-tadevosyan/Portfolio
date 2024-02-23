@@ -44,8 +44,6 @@ const Navbar = () => {
     },
   };
 
-
-
   const listVariants = {
     closed: {
       x: "100vw",
@@ -71,15 +69,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-16 flex items-center justify-between px-4 sm:px-12 lg:px-20 xl:px-48 text-xl ">
+    <div className="h-20 flex items-center justify-between px-4 sm:px-12 lg:px-20 xl:px-48 text-xl ">
       <div className="hidden md:flex gap-3 xl:w-1/3">
         {links.map((link) => (
           <NavLink link={link} key={link.title} />
         ))}
       </div>
       {/* Logo  */}
-      <div className=" z-50 md:hidden lg:flex xl:w-1/3 xl:justify-center">
-        Logo
+      <div className=" h-20 py-2 z-50 items-ccenter md:hidden lg:flex xl:w-1/3 xl:justify-center ">
+      <Image src="/logo.png" alt="linkedin" width={100} height={24} />
       </div>
 
       {/* Social  */}

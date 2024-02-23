@@ -25,10 +25,12 @@ const TransitionProvider = ({ children }) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0, display: "none" }}
           exit={{ opacity: 0, display: "none" }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
         >
-          {pathName.substring(1).charAt(0).toUpperCase() +
-            pathName.substring(2)}
+          {pathName === "/"
+            ? "Home"
+            : pathName.substring(1).charAt(0).toUpperCase() +
+              pathName.substring(2)}
         </motion.div>
         <motion.div
           className="h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30"
