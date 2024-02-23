@@ -1,13 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const text = "Say Hello";
 
+  console.log(process.env.NEXT_PUBLIC_SERVICE_ID);
+  console.log(process.env.NEXT_PUBLIC_TEMPLATE_ID);
+  console.log(process.env.NEXT_PUBLIC_PUBLIC_KEY);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -15,22 +18,22 @@ const ContactPage = () => {
     setError(false);
     setSuccess(false);
 
-    // emailjs
-    //   .sendForm(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     form.current,
-    //     process.env.NEXT_PUBLIC_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setSuccess(true);
-    //       form.current.reset();
-    //     },
-    //     () => {
-    //       setError(true);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          form.current.reset();
+        },
+        () => {
+          setError(true);
+        }
+      );
   };
 
   return (
