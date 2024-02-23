@@ -23,10 +23,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        "service_e70w192",
+        "template_p5dbs1o",
         form.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        "Y1RGY__W2p18lTs7r"
       )
       .then(
         () => {
@@ -37,6 +37,13 @@ const ContactPage = () => {
           setError(true);
         }
       );
+
+    setSuccess(true);
+
+    // Hide success message after 2 seconds
+    setTimeout(() => {
+      setSuccess(false);
+    }, 2000);
   };
 
   return (
