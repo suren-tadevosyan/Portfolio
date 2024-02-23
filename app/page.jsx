@@ -27,9 +27,9 @@ const Homepage = () => {
           {/* DESC */}
           <p className="md:text-xl">
             Step into a realm where pixels dance and user experiences mesmerize.
-            Greetings, visitor! I'm thrilled to have you here. As a passionate
-            front-end developer, I've sculpted this digital haven to showcase my
-            journey and creations.
+            Greetings, visitor! I&apos;m thrilled to have you here. As a
+            passionate front-end developer, I&apos;mve sculpted this digital
+            haven to showcase my journey and creations.
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4 mb-4  justify-center lg:justify-start lg:mb-0">
