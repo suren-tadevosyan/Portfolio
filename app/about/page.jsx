@@ -42,11 +42,11 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              I'm a highly motivated front-end developer with a true passion for
-              building captivating user experiences. I'm eager to leverage my
-              skills in a junior front-end developer role, where I can
-              contribute to cutting-edge web projects and continuously expand my
-              knowledge base.
+              I&apos;m a highly motivated front-end developer with a true
+              passion for building captivating user experiences. I&apos;m eager
+              to leverage my skills in a junior front-end developer role, where
+              I can contribute to cutting-edge web projects and continuously
+              expand my knowledge base.
             </p>
 
             {/* BIOGRAPHY SCROLL SVG */}
@@ -229,8 +229,8 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    "Set and monitored risk limits, ensuring responsible trading
-                    practices and mitigating potential losses."
+                    Set and monitored risk limits, ensuring responsible trading
+                    practices and mitigating potential losses.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-black-400 text-sm font-semibold">
@@ -252,8 +252,8 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    "Planned and dispatched freight shipments, ensuring
-                    efficient route optimization and adherence to deadlines."
+                    Planned and dispatched freight shipments, ensuring
+                    efficient route optimization and adherence to deadlines.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-black-400 text-sm font-semibold">
