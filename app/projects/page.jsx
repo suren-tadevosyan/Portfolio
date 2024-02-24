@@ -7,7 +7,7 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
-    color: "from-red-300 to-blue-300",
+ 
     title: "React Commerce",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
     img: "/proj1.PNG",
@@ -15,7 +15,7 @@ const items = [
   },
   {
     id: 2,
-    color: "from-blue-300 to-violet-300",
+
     title: "React.js Blog app",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
     img: "/proj1.PNG",
@@ -75,12 +75,12 @@ const PortfolioPage = () => {
           </motion.svg>
         </div>
 
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+        <div  style={{background: 'linear-gradient(to bottom, #536976, #292e49)'}} className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center overflow-x-normal bg-gradient-to-r from-purple-300 to-red-300" />
+            <div  style={{background: 'linear-gradient(to bottom, #536976, #292e49)'}} className="h-screen w-screen flex items-center justify-center overflow-x-normal " />
             {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+              <div  style={{background: 'linear-gradient(to bottom, #536976, #292e49)'}}
+                className={`h-screen w-screen flex items-center justify-center `}
                 key={item.id}
               >
                 <div className="flex flex-col gap-8 text-white">
@@ -119,7 +119,7 @@ const PortfolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+      <div  className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
         <h1 className="text-8xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg
