@@ -7,20 +7,23 @@ import { useRef } from "react";
 const items = [
   {
     id: 1,
- 
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+
+    title: "React.js Blog app",
+    desc: "Welcome to Space BLog App, a blog platform enabling users to share posts, comment, and connect via private messaging. Express yourself, engage with others, and dive into meaningful discussions effortlessly.",
     img: "/proj1.PNG",
-    link: "https://lama.dev",
+    link: "https://activeusers--space-blog-project.netlify.app/",
+    gitHub: "https://github.com/suren-tadevosyan/BlogProject",
   },
   {
     id: 2,
 
-    title: "React.js Blog app",
+    title: "React Commerce",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
     img: "/proj1.PNG",
-    link: "https://activeusers--space-blog-project.netlify.app/",
+    link: "https://lama.dev",
+    gitHub: "https://github.com/suren-tadevosyan/BlogProject",
   },
+
   // {
   //   id: 3,
   //   color: "from-violet-300 to-purple-300",
@@ -75,11 +78,22 @@ const PortfolioPage = () => {
           </motion.svg>
         </div>
 
-        <div  style={{background: 'linear-gradient(to bottom, #536976, #292e49)'}} className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+        <div
+          style={{ background: "linear-gradient(to bottom, #536976, #292e49)" }}
+          className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden"
+        >
           <motion.div style={{ x }} className="flex">
-            <div  style={{background: 'linear-gradient(to bottom, #536976, #292e49)'}} className="h-screen w-screen flex items-center justify-center overflow-x-normal " />
+            <div
+              style={{
+                background: "linear-gradient(to bottom, #536976, #292e49)",
+              }}
+              className="h-screen w-screen flex items-center justify-center overflow-x-normal "
+            />
             {items.map((item) => (
-              <div  style={{background: 'linear-gradient(to bottom, #536976, #292e49)'}}
+              <div
+                style={{
+                  background: "linear-gradient(to bottom, #536976, #292e49)",
+                }}
                 className={`h-screen w-screen flex items-center justify-center `}
                 key={item.id}
               >
@@ -95,12 +109,12 @@ const PortfolioPage = () => {
                   </p>
                   <div className="flex justify-start">
                     <Link
-                      href={item.link}
+                      href={item.gitHub}
                       className="flex justify-start"
                       target="_blank"
                     >
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                        See Demo
+                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded hover:bg-black">
+                        See Source Code
                       </button>
                     </Link>
                     <Link
@@ -108,7 +122,7 @@ const PortfolioPage = () => {
                       className="flex justify-start"
                       target="_blank"
                     >
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded hover:bg-black">
                         See Demo
                       </button>
                     </Link>
@@ -119,7 +133,7 @@ const PortfolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div  className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
         <h1 className="text-8xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg
@@ -142,7 +156,7 @@ const PortfolioPage = () => {
           </motion.svg>
           <Link
             href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
+            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-700"
           >
             Hire Me
           </Link>

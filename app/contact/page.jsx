@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Say Hello";
+  const text = "Get in Touch";
 
   const form = useRef();
 
@@ -14,8 +14,6 @@ const ContactPage = () => {
     console.log("semnd");
     e.preventDefault();
     setError(false);
-
-    // Hide success message after 2 seconds
 
     emailjs
       .sendForm(
@@ -30,7 +28,7 @@ const ContactPage = () => {
           form.current.reset();
           setTimeout(() => {
             setSuccess(false);
-          }, 2000);
+          }, 5000);
         },
         () => {
           setError(true);
@@ -40,7 +38,7 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className="h-full"
+      className="h-full overflow-x-hidden"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -89,10 +87,10 @@ const ContactPage = () => {
           </button>
           {success && (
             <motion.div
-              initial={{ y: "1200vh" }}
+              initial={{ y: "200vh" }}
               animate={{ y: "0%" }}
-              transition={{ duration: 1 }}
-              className="  lg:relative md:relative bottom-0 left-0 w-full text-center lg:bg-transparent md:bg-transparent py-0  xs:bg-black xs:py-5  rounded  xs:absolute"
+              transition={{ duration: 0.4 }}
+              className="   md:relative bottom-0 left-0 w-full text-center lg:absolute lg:bottom-20 lg:bg-transparent md:bg-transparent py-0  xs:bg-black xs:py-5  rounded  xs:absolute"
             >
               <span className=" text-green-600  lg:font-semibold    ">
                 Your message has been sent successfully!
