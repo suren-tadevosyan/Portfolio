@@ -22,14 +22,14 @@ const Homepage = () => {
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col lg:gap-8 sm:gap-5 items-center lg:justify-center md:justify-center sm:justify-center xs:justify-between">
           {/* TITLE */}
           <h1 className="xs:text-xl xs:mt-5  sm:text-2xl lg:text-6xl lg:pb-5 md:text-3xl md:mb-5 font-bold overflow-y-hidden text-center mt-10">
-            Step Inside My Digital Showcase!{" "}
+            A Showcase of Digital Expertise
           </h1>
           {/* DESC */}
           <p className="md:text-xl text-center">
-            Step into a realm where pixels dance and user experiences mesmerize.
-            Greetings, visitor! I&apos;m thrilled to have you here. As a
-            passionate front-end developer, I&apos;ve sculpted this digital
-            haven to showcase my journey and creations.
+            Hey there! I&apos;m a super excited front-end developer who loves
+            making websites and apps that people actually enjoy using. I&apos;m
+            not a coding pro yet, but I&apos;m a fast learner and always up for
+            a challenge.
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4 mb-4 md:justify-center lg:justify-center xs:justify-center lg:mb-0">
