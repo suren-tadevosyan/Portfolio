@@ -21,11 +21,11 @@ const Homepage = () => {
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col lg:gap-8 sm:gap-5 items-center lg:justify-center md:justify-center sm:justify-center xs:justify-between">
           {/* TITLE */}
-          <h1 className="xs:text-2xl sm:text-2xl lg:text-6xl lg:pb-5 md:text-3xl md:mb-5 font-bold overflow-y-hidden text-center mt-10">
+          <h1 className="xs:text-xl xs:mt-5  sm:text-2xl lg:text-6xl lg:pb-5 md:text-3xl md:mb-5 font-bold overflow-y-hidden text-center mt-10">
             Step Inside My Digital Showcase!{" "}
           </h1>
           {/* DESC */}
-          <p className="md:text-xl">
+          <p className="md:text-xl text-center">
             Step into a realm where pixels dance and user experiences mesmerize.
             Greetings, visitor! I&apos;m thrilled to have you here. As a
             passionate front-end developer, I&apos;ve sculpted this digital

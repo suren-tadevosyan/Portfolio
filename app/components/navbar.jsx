@@ -77,7 +77,12 @@ const Navbar = () => {
       </div>
       {/* Logo  */}
       <div className=" h-20 py-2 z-50 items-ccenter md:hidden lg:flex xl:w-1/3 xl:justify-center ">
-      <Image src="/logo.png" alt="linkedin" width={100} height={24} />
+        <Link
+          href="/"
+          className="w-25 h-12 relative flex justify-center items-center pt-2"
+        >
+          <Image src="/logo1.png" alt="linkedin" width={65} height={10} />
+        </Link>
       </div>
 
       {/* Social  */}
