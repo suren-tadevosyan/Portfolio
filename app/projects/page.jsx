@@ -8,7 +8,7 @@ const items = [
   {
     id: 1,
 
-    title: "React.js Blog app",
+    title: "React Blog app",
     desc: "Welcome to Space BLog App, a blog platform enabling users to share posts, comment, and connect via private messaging. Express yourself, engage with others, and dive into meaningful discussions effortlessly.",
     img: "/proj1.PNG",
     link: "https://activeusers--space-blog-project.netlify.app/",
@@ -17,11 +17,11 @@ const items = [
   {
     id: 2,
 
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "/proj1.PNG",
-    link: "https://lama.dev",
-    gitHub: "https://github.com/suren-tadevosyan/BlogProject",
+    title: "React Messenger(soon)",
+    desc: "Experience instant communication with real-time updates. Messages are delivered and displayed to recipients without delay, enabling fluid conversations.",
+    img: "/wip.jpg",
+    link: "#",
+    gitHub: "https://github.com/suren-tadevosyan/Messenger",
   },
 
   // {
