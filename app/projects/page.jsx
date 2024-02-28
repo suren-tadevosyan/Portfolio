@@ -19,8 +19,8 @@ const items = [
 
     title: "React Messenger(soon)",
     desc: "Experience instant communication with real-time updates. Messages are delivered and displayed to recipients without delay, enabling fluid conversations.",
-    img: "/wip.jpg",
-    link: "#",
+    img: "/messenger.png",
+    link: "https://react-messenger-st.netlify.app",
     gitHub: "https://github.com/suren-tadevosyan/Messenger",
   },
 
