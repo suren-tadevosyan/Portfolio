@@ -67,7 +67,7 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 xs:h-3/4 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 relative "
+          className="h-1/2 xs:h-3/4 md:h-full lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 relative "
         >
           <span>Dear Suren,</span>
           <textarea
@@ -90,7 +90,7 @@ const ContactPage = () => {
               initial={{ y: "200vh" }}
               animate={{ y: "0%" }}
               transition={{ duration: 0.4 }}
-              className="   md:relative bottom-0 left-0 w-full text-center lg:absolute lg:bottom-20 lg:bg-transparent md:bg-transparent py-0  xs:bg-black xs:py-5  rounded  xs:absolute"
+              className="   md:relative bottom-0 left-0 w-full text-center   lg:bg-transparent md:bg-transparent py-0  xs:bg-black xs:py-5  rounded  xs:absolute"
             >
               <span className=" text-green-600  lg:font-semibold    ">
                 Your message has been sent successfully!
