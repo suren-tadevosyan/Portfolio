@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 
 const items = [
   {
@@ -46,7 +48,7 @@ const PortfolioPage = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
   return (
     <motion.div
@@ -94,39 +96,37 @@ const PortfolioPage = () => {
                 style={{
                   background: "linear-gradient(to bottom, #536976, #292e49)",
                 }}
-                className={`h-screen w-screen flex items-center justify-center `}
+                className={`h-screen w-screen  flex items-center justify-center `}
                 key={item.id}
               >
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-4xl xl:text-8xl">
+                <div className=" flex flex-col gap-5 text-white">
+                  <h1 className="text-xl font-bold md:text-4xl  xl:text-7xl">
                     {item.title}
                   </h1>
-                  <div className="relative rounded w-80 h-56 md:w-96 md:h-64 lg:w-[400px] lg:h-[250px] xl:w-[600px] xl:h-[420px]">
+                  <div className="relative rounded w-80 h-56 md:w-96 md:h-64  xl:w-[600px] xl:h-[420px]">
                     <Image src={item.img} className="rounded" alt="" fill />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-90 rounded">
+                      <div className="text-white">
+                        <Link href={item.gitHub} target="_blank">
+                          <button className="p-10 mr-20  rounded hover:bg-gray-700">
+                            <GitHubIcon style={{ fontSize: 60 }} />
+                          </button>
+                        </Link>
+
+                        <Link href={item.link} target="_blank">
+                          <button className="p-10  rounded hover:bg-gray-700">
+                            <RemoveRedEyeOutlinedIcon
+                              style={{ fontSize: 60 }}
+                            />
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                  <div className="flex justify-start">
-                    <Link
-                      href={item.gitHub}
-                      className="flex justify-start"
-                      target="_blank"
-                    >
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded hover:bg-black">
-                        See Source Code
-                      </button>
-                    </Link>
-                    <Link
-                      href={item.link}
-                      className="flex justify-start"
-                      target="_blank"
-                    >
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded hover:bg-black">
-                        See Demo
-                      </button>
-                    </Link>
-                  </div>
+                 
                 </div>
               </div>
             ))}
