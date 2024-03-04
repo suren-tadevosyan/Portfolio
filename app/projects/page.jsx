@@ -98,10 +98,10 @@ const PortfolioPage = () => {
                 key={item.id}
               >
                 <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
+                  <h1 className="text-xl font-bold md:text-4xl lg:text-4xl xl:text-8xl">
                     {item.title}
                   </h1>
-                  <div className="relative rounded w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+                  <div className="relative rounded w-80 h-56 md:w-96 md:h-64 lg:w-[400px] lg:h-[250px] xl:w-[600px] xl:h-[420px]">
                     <Image src={item.img} className="rounded" alt="" fill />
                   </div>
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
