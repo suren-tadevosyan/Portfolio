@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 
@@ -49,6 +49,21 @@ const PortfolioPage = () => {
 
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const responsiveDimensions = {
+    height: windowWidth < 500 ? 30 : 60,
+    width: windowWidth < 500 ? 30 : 60,
+  };
 
   return (
     <motion.div
@@ -109,22 +124,14 @@ const PortfolioPage = () => {
                       <div className="text-white">
                         <Link href={item.gitHub} target="_blank">
                           <button className="p-10 mr-20  rounded hover:bg-gray-700">
-                            <GitHubIcon
-                              style={{
-                                fontSize:
-                                  window.innerWidth >= 800 ? "60px" : "30px",
-                              }}
-                            />
+                            <GitHubIcon {...responsiveDimensions} />
                           </button>
                         </Link>
 
                         <Link href={item.link} target="_blank">
                           <button className="p-10  rounded hover:bg-gray-700">
                             <RemoveRedEyeOutlinedIcon
-                              style={{
-                                fontSize:
-                                  window.innerWidth >= 800 ? "60px" : "30px",
-                              }}
+                              {...responsiveDimensions}
                             />
                           </button>
                         </Link>
