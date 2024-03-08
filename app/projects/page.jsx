@@ -109,14 +109,22 @@ const PortfolioPage = () => {
                       <div className="text-white">
                         <Link href={item.gitHub} target="_blank">
                           <button className="p-10 mr-20  rounded hover:bg-gray-700">
-                            <GitHubIcon style={{ fontSize: 60 }} />
+                            <GitHubIcon
+                              style={{
+                                fontSize:
+                                  window.innerWidth >= 800 ? "60px" : "30px",
+                              }}
+                            />
                           </button>
                         </Link>
 
                         <Link href={item.link} target="_blank">
                           <button className="p-10  rounded hover:bg-gray-700">
                             <RemoveRedEyeOutlinedIcon
-                              style={{ fontSize: 60 }}
+                              style={{
+                                fontSize:
+                                  window.innerWidth >= 800 ? "60px" : "30px",
+                              }}
                             />
                           </button>
                         </Link>
@@ -126,7 +134,6 @@ const PortfolioPage = () => {
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
-                 
                 </div>
               </div>
             ))}
