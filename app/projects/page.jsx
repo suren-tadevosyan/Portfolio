@@ -46,20 +46,29 @@ const items = [
 
 const PortfolioPage = () => {
   const ref = useRef();
-
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(() => {
+    // Check if window is defined (to avoid server-side rendering error)
+    if (typeof window !== "undefined") {
+      return window.innerWidth;
+    }
+    // If window is not defined (i.e., during server-side rendering), return a default value
+    return 0; // You can choose any suitable default value here
+  });
 
+  // Use effect to update window width when resizing
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
 
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
+  // Use windowWidth state variable for responsive dimensions
   const responsiveDimensions = {
     height: windowWidth < 500 ? 30 : 60,
     width: windowWidth < 500 ? 30 : 60,
