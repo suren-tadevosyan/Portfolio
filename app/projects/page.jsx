@@ -10,20 +10,21 @@ const items = [
   {
     id: 1,
 
+    title: "React Messenger",
+    desc: "Experience instant communication with real-time updates. Messages are delivered and displayed to recipients without delay, enabling fluid conversations.",
+    img: "/messenger.png",
+    link: "https://react-messenger-st.netlify.app",
+    gitHub: "https://github.com/suren-tadevosyan/Messenger",
+  },
+
+  {
+    id: 2,
+
     title: "React Blog app",
     desc: "Welcome to Space BLog App, a blog platform enabling users to share posts, comment, and connect via private messaging. Express yourself, engage with others, and dive into meaningful discussions effortlessly.",
     img: "/proj1.PNG",
     link: "https://activeusers--space-blog-project.netlify.app/",
     gitHub: "https://github.com/suren-tadevosyan/BlogProject",
-  },
-  {
-    id: 2,
-
-    title: "React Messenger(soon)",
-    desc: "Experience instant communication with real-time updates. Messages are delivered and displayed to recipients without delay, enabling fluid conversations.",
-    img: "/messenger.png",
-    link: "https://react-messenger-st.netlify.app",
-    gitHub: "https://github.com/suren-tadevosyan/Messenger",
   },
 
   // {
@@ -50,15 +51,13 @@ const PortfolioPage = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
   const [windowWidth, setWindowWidth] = useState(() => {
-    // Check if window is defined (to avoid server-side rendering error)
     if (typeof window !== "undefined") {
       return window.innerWidth;
     }
-    // If window is not defined (i.e., during server-side rendering), return a default value
-    return 0; // You can choose any suitable default value here
+
+    return 0;
   });
 
-  // Use effect to update window width when resizing
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
 
@@ -68,7 +67,6 @@ const PortfolioPage = () => {
     }
   }, []);
 
-  // Use windowWidth state variable for responsive dimensions
   const responsiveDimensions = {
     height: windowWidth < 500 ? 30 : 60,
     width: windowWidth < 500 ? 30 : 60,
@@ -157,7 +155,7 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center mt-4">
-        <h1 className="text-8xl">Do you need a project?</h1>
+        <h1 className="text-8xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
