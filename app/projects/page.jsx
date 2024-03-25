@@ -56,12 +56,19 @@ const PortfolioPage = () => {
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      // Check if window is defined before accessing it
+      if (typeof window !== "undefined") {
+        setWindowWidth(window.innerWidth);
+      }
+    };
 
+    // Add event listener only if window is defined
     if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }
