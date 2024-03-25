@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { WelcAnimation } from "./components/animations";
 
 import { motion } from "framer-motion";
 
@@ -15,8 +16,8 @@ const Homepage = () => {
     >
       <div className="h-full flex flex-col items-center lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 w-full lg:h-2/3 lg:mb-40 lg:w-1/2 lg:mg-r-20 relative">
-          <Image src="/img.png" alt="" fill className="object-contain" />
+        <div className="h-1/2 w-full lg:h-2/3  lg:w-1/2 lg:mg-r-20 flex items-center">
+          <WelcAnimation />
         </div>
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col lg:gap-8 sm:gap-5 items-center lg:justify-center md:justify-center sm:justify-center xs:justify-between">

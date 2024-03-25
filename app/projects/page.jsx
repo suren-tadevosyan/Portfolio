@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import Stars from "../components/starAnim.tsx";
 
 const items = [
   {
@@ -12,9 +13,10 @@ const items = [
 
     title: "React Messenger",
     desc: "Experience instant communication with real-time updates. Messages are delivered and displayed to recipients without delay, enabling fluid conversations.",
-    img: "/messenger.png",
+    img: "/proj2.png",
     link: "https://react-messenger-st.netlify.app",
     gitHub: "https://github.com/suren-tadevosyan/Messenger",
+    backVideo: "/back.mp4",
   },
 
   {
@@ -25,6 +27,8 @@ const items = [
     img: "/proj1.PNG",
     link: "https://activeusers--space-blog-project.netlify.app/",
     gitHub: "https://github.com/suren-tadevosyan/BlogProject",
+    backVideo: "/back.mp41",
+    stars: true,
   },
 
   // {
@@ -47,6 +51,8 @@ const items = [
 
 const PortfolioPage = () => {
   const ref = useRef();
+  const videoRef = useRef(null);
+
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
@@ -115,17 +121,28 @@ const PortfolioPage = () => {
             />
             {items.map((item) => (
               <div
-                style={{
-                  background: "linear-gradient(to bottom, #536976, #292e49)",
-                }}
-                className={`h-screen w-screen  flex items-center justify-center `}
+                style={{}}
+                className={`h-screen w-screen  flex items-center justify-center container mr-40 `}
                 key={item.id}
               >
+                <video
+                  ref={videoRef}
+                  src={item.backVideo}
+                  autoPlay
+                  loop
+                  muted
+                />
+
+                {item.stars && (
+                  <div className="star-anim">
+                    <Stars />
+                  </div>
+                )}
                 <div className=" flex flex-col gap-5 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl  xl:text-7xl">
+                  <h1 className="text-xl font-bold md:text-4xl z-100 ${item.stars ? 'text-white' : 'text-black'}  xl:text-7xl">
                     {item.title}
                   </h1>
-                  <div className="relative rounded w-80 h-56 md:w-96 md:h-64  xl:w-[600px] xl:h-[420px]">
+                  <div className="relative rounded w-80 h-56 md:w-96 md:h-64  xl:w-[600px] xl:h-[420px] shadow-lg">
                     <Image src={item.img} className="rounded" alt="" fill />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-90 rounded">
                       <div className="text-white">
@@ -145,7 +162,7 @@ const PortfolioPage = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]${item.stars ? 'text-white' : 'text-black'}">
                     {item.desc}
                   </p>
                 </div>
