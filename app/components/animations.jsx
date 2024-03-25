@@ -29,15 +29,4 @@ export const WelcAnimation = () => {
   return <Lottie options={defaultOptions} {...responsiveDimensions} />;
 };
 
-export const ByAnimation = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: byAnim,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
-  return <Lottie options={defaultOptions} height={500} width={500} />;
-};

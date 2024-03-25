@@ -27,7 +27,7 @@ const items = [
     img: "/proj1.PNG",
     link: "https://activeusers--space-blog-project.netlify.app/",
     gitHub: "https://github.com/suren-tadevosyan/BlogProject",
-    backVideo: "/back.mp41",
+
     stars: true,
   },
 
@@ -56,21 +56,12 @@ const PortfolioPage = () => {
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
-  const [windowWidth, setWindowWidth] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth;
-    }
-
-    return 0;
-  });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const responsiveDimensions = {
