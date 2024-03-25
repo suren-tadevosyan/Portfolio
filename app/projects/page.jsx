@@ -52,18 +52,11 @@ const items = [
 const PortfolioPage = () => {
   const ref = useRef();
   const videoRef = useRef(null);
-  
 
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
 
-  const [windowWidth, setWindowWidth] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth;
-    }
-
-    return 0;
-  });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
