@@ -11,14 +11,22 @@ export const WelcAnimation = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 0
+  );
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
 
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+    }
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
   const responsiveDimensions = {
@@ -28,5 +36,3 @@ export const WelcAnimation = () => {
 
   return <Lottie options={defaultOptions} {...responsiveDimensions} />;
 };
-
-
